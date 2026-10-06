@@ -36,5 +36,8 @@ curl -sS -w '\nHTTP %{http_code}\n' -X POST "$BASE_URL/bookings" \
   -H 'Content-Type: application/json' \
   -d '{"equipmentId":"eq-1","borrowerName":"Conflict User","startAt":"2026-10-20T12:30:00.000Z","endAt":"2026-10-20T13:30:00.000Z","purpose":"Conflict"}'
 
-echo "8. Delete booking (204)"
+echo "8. Missing booking (404)"
+curl -sS -w '\nHTTP %{http_code}\n' "$BASE_URL/bookings/not-found"
+
+echo "9. Delete booking (204)"
 curl -sS -i -X DELETE "$BASE_URL/bookings/$booking_id" | head -n 1

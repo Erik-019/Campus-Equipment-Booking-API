@@ -28,6 +28,10 @@ The local base URL is `http://localhost:8787/api`.
 
 See [API_CONTRACT.md](./API_CONTRACT.md) for endpoints and examples.
 See [SCHEMA.md](./SCHEMA.md) for the relationship and overlap rule.
+See [QUALITY_GATE_REVIEW.md](./QUALITY_GATE_REVIEW.md) for the review findings
+and final submission decision.
+See [curl_test_guide.md](./curl_test_guide.md) for the instructor-provided
+manual test sequence.
 
 ## Curl evidence
 
